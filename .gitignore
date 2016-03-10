@@ -1,1 +1,3 @@
-./out
+/node_modules
+/out/client.min.js
+/out/stylesheet.css
