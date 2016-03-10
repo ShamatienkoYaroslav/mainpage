@@ -1,0 +1,230 @@
+/* -- IMPORTS -- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+
+
+/* -- VARIABLES -- */
+$font-main: 'Roboto', sans-serif;
+$background-color-navbar: rgba(255, 255, 255, 0);
+$font-size-title: 1.35rem;
+$color-title: #ffffff;
+$color-white: #ffffff;
+$color-grey: #cfcfcf;
+$background-color-navbar-link: rgba(218, 213, 213, 0.3) !important;
+$background-color-body: #ffffff;
+$font-size-header: 3rem;
+$font-size-subtitle: 1.2rem;
+$color-yellow: #d2c437;
+$color-yellow-hover: #d5cc6f;
+$color-smoke: #f4e8e0;
+$color-dark-background: #3C3734;
+
+
+/* -- EXTENSION -- */
+.dark-section {
+  background-color: $color-dark-background;
+  color: $color-smoke;
+}
+
+/* -- GENERAL -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+  background-color: $background-color-body;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: block;
+  margin-top: 2rem;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.button {
+  padding: 12px 40px;
+  background-color: $color-yellow;
+  border-radius: 6rem;
+
+  &:hover {
+    background-color: $color-yellow-hover;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* -- NAVBAR -- */
+.navbar {
+  background-color: $background-color-navbar;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  #title {
+    font-size: $font-size-title;
+    font-weight: 700;
+    line-height: 3rem;
+    color: $color-title;
+    text-decoration: none;
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .navbar-right {
+    float: right;
+
+    .navbar-link {
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 500;
+      line-height: 3rem;
+      margin-left: 2rem;
+      padding: .7rem;
+      color: $color-white;
+
+      &:hover {
+        background-color: $background-color-navbar-link;
+        border-radius: 6rem;
+      }
+    }
+  }
+}
+
+
+/* -- HEADER -- */
+#header {
+  .landing {
+    height: 100vh;
+    background: url('public/img/main-4.jpg') center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 3rem;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .landing-items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 0 8rem 0;
+
+      .landing-title {
+        color: $color-white;
+        font-size: $font-size-header;
+        font-weight: 700;
+        margin-top: 11rem;
+        text-transform: uppercase;
+      }
+
+      .landing-subtitle {
+        color: $color-grey;
+        font-size: $font-size-subtitle;
+        font-size: 300;
+        margin-top: 3rem;
+        line-height: 1.8rem;
+      }
+
+      .landing-button {
+        margin-top: 6rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+/* -- PRODUCTS -- */
+#products {
+
+}
+
+
+/* -- CLIENTS -- */
+#clients {
+  @extend .dark-section;
+}
+
+/* -- ABOUT -- */
+#about {
+
+}
+
+/* -- CONTACTS -- */
+#contacts{
+  @extend .dark-section;
+
+  .email {
+    border: 1px solid $color-dark-background;
+    border-radius: 1rem;
+    padding: 12px;
+    &:hover {
+      border: 1px solid $color-smoke;
+      background-color: lighten($color-dark-background, 5%);
+    }
+  }
+
+  .contact-title {
+    padding: 0.2rem;
+    margin-right: 5px;
+  }
+
+  .contact-item {
+    font-size: 1.5rem;
+    float: left;
+  }
+
+  a {
+    color: $color-smoke;
+  }
+}
