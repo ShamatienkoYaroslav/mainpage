@@ -4,7 +4,7 @@
 
 /* -- VARIABLES -- */
 $font-main: 'Roboto', sans-serif;
-$background-color-navbar: rgba(255, 255, 255, 0);
+$background-color-navbar: rgba(30, 30, 30, 0.9);
 $font-size-title: 1.35rem;
 $color-title: #ffffff;
 $color-white: #ffffff;
@@ -12,11 +12,14 @@ $color-grey: #cfcfcf;
 $background-color-navbar-link: rgba(218, 213, 213, 0.3) !important;
 $background-color-body: #ffffff;
 $font-size-header: 3rem;
-$font-size-subtitle: 1.2rem;
-$color-yellow: #d2c437;
-$color-yellow-hover: #d5cc6f;
-$color-smoke: #f4e8e0;
-$color-dark-background: #3C3734;
+$font-size-subtitle: 1.5rem;
+$font-size-button: 1.1rem;
+$border-radius: 0.6rem;
+$color-green: #bcd35b;
+$color-green-hover: #9caf4b;
+$color-smoke: #d9dbd7;
+$color-dark-background: #444b4e;
+$letter-spacing: 1px;
 
 
 /* -- EXTENSION -- */
@@ -66,12 +69,15 @@ a {
 }
 
 .button {
-  padding: 12px 40px;
-  background-color: $color-yellow;
-  border-radius: 6rem;
+  padding: 20px 40px;
+  background-color: $color-green;
+  border-radius: $border-radius;
+  width: 13rem;
+  letter-spacing: $letter-spacing;
+  font-size: $font-size-button;
 
   &:hover {
-    background-color: $color-yellow-hover;
+    background-color: $color-green-hover;
   }
 }
 
@@ -115,6 +121,18 @@ section {
     float: left;
     text-transform: uppercase;
     letter-spacing: 2px;
+    display: block;
+
+    #title-img {
+      width: 3rem;
+      float: left;
+    }
+
+    #title-lt {
+      color: $color-green;
+      float: left;
+      margin-left: 5px;
+    }
   }
 
   .navbar-right {
@@ -126,12 +144,14 @@ section {
       font-weight: 500;
       line-height: 3rem;
       margin-left: 2rem;
-      padding: .7rem;
-      color: $color-white;
+      padding: 0.8rem 1.1rem;
+      color: $color-smoke;
+      letter-spacing: $letter-spacing;
+      text-transform: uppercase;
 
       &:hover {
-        background-color: $background-color-navbar-link;
-        border-radius: 6rem;
+        color: $color-green;
+        border-radius: $border-radius;
       }
     }
   }
@@ -142,7 +162,7 @@ section {
 #header {
   .landing {
     height: 100vh;
-    background: url('public/img/main-4.jpg') center;
+    background: url('public/img/main-6.jpeg') center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -164,20 +184,26 @@ section {
         font-size: $font-size-header;
         font-weight: 700;
         margin-top: 11rem;
-        text-transform: uppercase;
+        letter-spacing: 2.5px;
+
+        #landing-title-iot {
+          color: $color-green;
+        }
       }
 
       .landing-subtitle {
-        color: $color-grey;
+        color: $color-white;
         font-size: $font-size-subtitle;
         font-size: 300;
         margin-top: 3rem;
         line-height: 1.8rem;
+        letter-spacing: $letter-spacing;
       }
 
       .landing-button {
         margin-top: 6rem;
         cursor: pointer;
+        text-transform: uppercase;
       }
     }
   }

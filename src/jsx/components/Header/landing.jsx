@@ -16,12 +16,12 @@ export default class Landing extends React.Component {
         <div class="container">
           <div class="landing-items">
             <p class="landing-title">
-              Якість - наш принцип
+              <span id="landing-title-iot">Internet of Things</span><br/> for production facilities
             </p>
             <p class="landing-subtitle">
-              Ми команда кваліфікованих спеціалістів та професіоналів з розробки програмного забезпечення
+              Hand by hand with modern technologies
             </p>
-            <a class="button landing-button" onClick={this.scrollToProducts.bind(this)}>Більше</a>
+            <a class="button landing-button" onClick={this.scrollToProducts.bind(this)}>Show more</a>
           </div>
         </div>
       </div>

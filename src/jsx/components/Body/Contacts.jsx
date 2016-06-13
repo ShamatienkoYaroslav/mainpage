@@ -6,7 +6,7 @@ export default class Contacts extends React.Component {
       <section id="contacts">
         <div name="contacts" class="container">
           <div class="center">
-            <p class="section-title">Контакти</p>
+            <p class="section-title">Contacts</p>
             <div class="wrapper clearfix">
               <a href="mailto:shamatienko.yaroslav@gmail.com" class="contact-item email"><span class="contact-title"><i class="fa fa-at"></i></span>shamatienko.yaroslav@gmail.com</a>
             </div>

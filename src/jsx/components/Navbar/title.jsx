@@ -4,7 +4,8 @@ export default class Title extends React.Component {
   render() {
     return (
       <a id="title" class="navbar-brand" href="#">
-        Принцип
+        <img id="title-img" src="public/img/logo001.png"></img>
+        <span id="title-lt">PRINCIP</span>
       </a>
     );
   }
